@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const CONFIG = {
     VERSION: 1,
     BUILD: 1,
@@ -18,7 +20,8 @@ const CONFIG = {
         if (!this.PROD) {
             string_connection = 'mongodb://' + this.DB.HOST + ':' + this.DB.PORT + '/' + this.DB.DATABASE
         }else{
-            string_connection = "mongodb+srv://sebastienRafalimanana:ramsey.xy5@webcupdb.an8xn.mongodb.net/test?retryWrites=true&w=majority"
+            /* string_connection = "mongodb+srv://sebastienRafalimanana:ramsey.xy5@webcupdb.an8xn.mongodb.net/test?retryWrites=true&w=majority" */
+            string_connection = process.env.MONGODB_URL;
         }
         return string_connection;
         
