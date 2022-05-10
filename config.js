@@ -3,7 +3,7 @@ require('dotenv').config();
 const CONFIG = {
     VERSION: 1,
     BUILD: 1,
-    PROD:false,
+    PROD:true,
     URL: 'http://localhost',
     API_PATH: '/api',
     PORT: process.env.PORT || 3000,
